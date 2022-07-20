@@ -11,18 +11,18 @@ namespace Sharepoint.Http.Data.Connector.UT
             _sharepointContext = new SharepointDataContext(new SharepointContextConfiguration
             {
                 // Authentication for sharepoint configuration.
-                AuthenticationUrl = "https://accounts.accesscontrol.windows.net/346a1d1d-e75b-4753-902b-74ed60ae77a1/",
-                TenantId = "346a1d1d-e75b-4753-902b-74ed60ae77a1",
-                ClientId = "1dbbe2e1-035e-481d-884e-1bd3596d96fb@346a1d1d-e75b-4753-902b-74ed60ae77a1",
-                ClientSecret = "GrqxkeBqIsN8wVKEiRt1j0PjozPatUQSyCfhBlFeTdk=",
-                GrantType = "client_credentials",
-                Resource = "00000003-0000-0ff1-ce00-000000000000/laureatelatammx.sharepoint.com@346a1d1d-e75b-4753-902b-74ed60ae77a1",
+                AuthenticationUrl = "",
+                TenantId = "",
+                ClientId = "",
+                ClientSecret ="",
+                GrantType = "",
+                Resource = "",
                 // Rest API to sharepoint site configuration.
-                SharepointSiteId = "8cdc34d0-70a9-47aa-b951-e2e7554b59f3",
-                SharepointSiteName = "Documentos de alumnos",
-                SharepointInstanceUrl = "https://laureatelatammx.sharepoint.com/",
-                SharepointSiteUrl = "https://laureatelatammx.sharepoint.com/sites/CRM-Monitor/",
-                ServerRelativeUrl = "/sites/CRM-Monitor/Documentos de alumnos/"
+                SharepointSiteId = "",
+                SharepointSiteName = "",
+                SharepointInstanceUrl = "",
+                SharepointSiteUrl = "",
+                ServerRelativeUrl = ""
             });
         }
 
