@@ -85,7 +85,7 @@
       }
     },
     "C:\\Orion\\Sharepoint HDC\\sharepoint-http-data-connector\\Sharepoint.Http.Data.Connector\\Sharepoint.Http.Data.Connector\\Sharepoint.Http.Data.Connector.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Orion\\Sharepoint HDC\\sharepoint-http-data-connector\\Sharepoint.Http.Data.Connector\\Sharepoint.Http.Data.Connector\\Sharepoint.Http.Data.Connector.csproj",
         "projectName": "Sharepoint.Http.Data.Connector",
