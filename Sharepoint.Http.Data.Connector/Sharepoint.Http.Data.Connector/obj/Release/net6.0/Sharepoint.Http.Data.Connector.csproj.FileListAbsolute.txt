@@ -1,0 +1,12 @@
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\bin\Release\net6.0\Sharepoint.Http.Data.Connector.deps.json
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\bin\Release\net6.0\Sharepoint.Http.Data.Connector.dll
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\bin\Release\net6.0\Sharepoint.Http.Data.Connector.pdb
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\Sharepoint.Http.Data.Connector.csproj.AssemblyReference.cache
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\Sharepoint.Http.Data.Connector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\Sharepoint.Http.Data.Connector.AssemblyInfoInputs.cache
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\Sharepoint.Http.Data.Connector.AssemblyInfo.cs
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\Sharepoint.Http.Data.Connector.csproj.CoreCompileInputs.cache
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\Sharepoint.Http.Data.Connector.dll
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\refint\Sharepoint.Http.Data.Connector.dll
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\Sharepoint.Http.Data.Connector.pdb
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\obj\Release\net6.0\ref\Sharepoint.Http.Data.Connector.dll
