@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RFE9m8TzPxtrJ2YuQLp+HNyKd9RrdEWuQNWq1V1hb5SJYmfbTYvxaZGt2e0XhfCCfH+YtAXJV0fK7OX9QAZ6wA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Orion IT solutions\\Sharepoint HDC\\sharepoint-http-data-connector\\Sharepoint.Http.Data.Connector\\Sharepoint.Http.Data.Connector\\Sharepoint.Http.Data.Connector.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emman\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
