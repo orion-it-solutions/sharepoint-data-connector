@@ -1,2 +1,3 @@
-# sharepoint-data-connector
-Sharepoint data entity framework core can help us to create a connection with a sharepoint site from the REST API that Sharepoint provides.
+# Sharepoint Http Data Connector
+Sharepoint http data connector is a library that can help us manage API calls to our sites on Sharepoint.
+Provides a list of features that are useful for this integration.
