@@ -8,6 +8,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/orion-it-solutions/sharepoint-http-data-connector/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.1</Version>
+    <Authors>Emmanuel Toledo</Authors>
   </PropertyGroup>
 
   <ItemGroup>

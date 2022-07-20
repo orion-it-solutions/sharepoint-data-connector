@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Sharepoint.Http.Data.Connector</id>
+    <version>1.0.0</version>
+    <authors>Sharepoint.Http.Data.Connector</authors>
+    <icon>Sharepoint http data connector.png</icon>
+    <readme>README.md</readme>
+    <description>Package Description</description>
+    <repository type="git" url="https://github.com/orion-it-solutions/sharepoint-http-data-connector/" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector\bin\Release\net6.0\Sharepoint.Http.Data.Connector.dll" target="lib\net6.0\Sharepoint.Http.Data.Connector.dll" />
+    <file src="C:\Users\642904\Downloads\Sharepoint http data connector.png" target="\Sharepoint http data connector.png" />
+    <file src="C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\README.md" target="\README.md" />
+  </files>
+</package>
