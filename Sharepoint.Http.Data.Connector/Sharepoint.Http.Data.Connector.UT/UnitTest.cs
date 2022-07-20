@@ -77,7 +77,7 @@ namespace Sharepoint.Http.Data.Connector.UT
         [TestMethod]
         public async Task Success_Download_File()
         {
-            var response = await _sharepointContext.DownloadFileAsync("020044413", "TestDocument.pdf");
+            var response = await _sharepointContext.DownloadFileAsync("020044412", "TestDocument.pdf");
             if (response.Length <= 0)
                 throw new Exception("The resource must be downloaded, it exists!!");
         }
