@@ -1,3 +1,4 @@
+C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\CoverletSourceRootsMapping
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\testhost.dll
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\testhost.exe
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -89,6 +90,8 @@ C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Con
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\Sharepoint.Data.Connector.dll
+C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\Sharepoint.Data.Connector.pdb
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\obj\Debug\net6.0\Sharepoint.Data.Connector.UT.csproj.AssemblyReference.cache
 C:\Orion\Sharepoint Data Connector\sharepoint-data-connector\Sharepoint.Data.Connector\Sharepoint.Data.Connector.UT\obj\Debug\net6.0\Sharepoint.Data.Connector.UT.GeneratedMSBuildEditorConfig.editorconfig

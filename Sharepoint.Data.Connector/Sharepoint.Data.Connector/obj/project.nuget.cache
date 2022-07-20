@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "A0g/1oK/mASCLaaJgubutUXaEmkuOS89sG7VS5RLoe6Bd7QX7z7iuRAfvB+xsiEI4Kar2SiZdGA/yQc/SqAT6Q==",
+  "dgSpecHash": "htSqBKNKPsq/hgBf0/CYulTXA/lEq3CQhHzRlRmRpr0BGrf5k3dV8JkTpOZ0ZVxQCdetcHkKW3BYyLjaZlDRKg==",
   "success": true,
-  "projectFilePath": "C:\\Orion\\Sharepoint Data Connector\\sharepoint-data-connector\\Sharepoint.Data.Connector\\Sharepoint.Data.Connector\\Sharepoint.Data.Connector.csproj",
+  "projectFilePath": "C:\\Projects\\Orion IT solutions\\Sharepoint HDC\\sharepoint-http-data-connector\\Sharepoint.Data.Connector\\Sharepoint.Data.Connector\\Sharepoint.Data.Connector.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\642904\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\emman\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
