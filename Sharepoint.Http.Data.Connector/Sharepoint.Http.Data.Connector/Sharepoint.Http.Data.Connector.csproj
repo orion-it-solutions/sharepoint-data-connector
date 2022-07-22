@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,6 +12,8 @@
     <FileVersion>1.0.0.1</FileVersion>
     <Version>1.0.1</Version>
     <Authors>Emmanuel Toledo</Authors>
+    <Description>Sharepoint http data connector is a library that can help us manage API calls to our sites on Sharepoint.
+Provides a list of features that are useful for this integration.</Description>
   </PropertyGroup>
 
   <ItemGroup>
