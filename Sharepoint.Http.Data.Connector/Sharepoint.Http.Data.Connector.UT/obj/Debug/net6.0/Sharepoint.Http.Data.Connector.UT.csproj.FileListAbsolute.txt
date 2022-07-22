@@ -100,13 +100,13 @@ C:\Projects\Orion IT solutions\Sharepoint HDC\sharepoint-http-data-connector\Sha
 C:\Projects\Orion IT solutions\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\obj\Debug\net6.0\Sharepoint.Http.Data.Connector.UT.genruntimeconfig.cache
 C:\Projects\Orion IT solutions\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\obj\Debug\net6.0\ref\Sharepoint.Http.Data.Connector.UT.dll
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\CoverletSourceRootsMapping
-C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\testhost.exe
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\testhost.dll
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\testhost.exe
+C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Microsoft.TestPlatform.AdapterUtilities.dll
-C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Sharepoint.Http.Data.Connector.UT.deps.json
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Sharepoint.Http.Data.Connector.UT.runtimeconfig.json
 C:\Orion\Sharepoint HDC\sharepoint-http-data-connector\Sharepoint.Http.Data.Connector\Sharepoint.Http.Data.Connector.UT\bin\Debug\net6.0\Sharepoint.Http.Data.Connector.UT.dll

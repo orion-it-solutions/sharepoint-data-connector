@@ -3,8 +3,20 @@ using Sharepoint.Http.Data.Connector.Business.Infrastructure.Exceptions;
 
 namespace Sharepoint.Http.Data.Connector.Extensions
 {
+    /// <summary>
+    /// This class contains the service extension methods to used in Sharepoint http data connector library.
+    /// </summary>
     public static class ServiceExtensions
     {
+        /// <summary>
+        /// Function to validate the type of error response during a connection with a Sharepoint instance.
+        /// </summary>
+        /// <param name="httpResponse">Response of connection with sharepoint instance.</param>
+        /// <returns></returns>
+        /// <exception cref="NotFoundException">Not found resource exception.</exception>
+        /// <exception cref="BadRequestException">Bad request exception.</exception>
+        /// <exception cref="UnauthorizedException">Unauthorized exception.</exception>
+        /// <exception cref="InternalServerException">Internal server error exception.</exception>
         public static async Task ValidateException(this HttpResponseMessage httpResponse)
         {
             var status = httpResponse.StatusCode;
@@ -15,27 +27,38 @@ namespace Sharepoint.Http.Data.Connector.Extensions
             switch (status)
             {
                 case System.Net.HttpStatusCode.NotFound:
-                    if((JObject)response["error"] is not null)
+                    if (!string.IsNullOrEmpty((string)response["error_description"]))
+                        throw new NotFoundException((string)response["error_description"]);
+                    if ((JObject)response["error"] is not null)
                         throw new NotFoundException((string)response["error"]["message"]["value"]);
                     if ((JObject)response["odata.error"] is not null)
                         throw new NotFoundException((string)response["odata.error"]["message"]["value"]);
-                    throw new NotFoundException($"The resource does not exist.");
+                    httpResponse.EnsureSuccessStatusCode();
+                    break;
                 case System.Net.HttpStatusCode.BadRequest:
                     if(!string.IsNullOrEmpty((string)response["error_description"]))
                         throw new BadRequestException((string)response["error_description"]);
-                    throw new BadRequestException();
+                    if ((JObject)response["error"] is not null)
+                        throw new BadRequestException((string)response["error"]["message"]["value"]);
+                    if ((JObject)response["odata.error"] is not null)
+                        throw new BadRequestException((string)response["odata.error"]["message"]["value"]);
+                    httpResponse.EnsureSuccessStatusCode();
+                    break;
                 case System.Net.HttpStatusCode.Unauthorized:
                     if (!string.IsNullOrEmpty((string)response["error_description"]))
                         throw new UnauthorizedException((string)response["error_description"]);
                     httpResponse.EnsureSuccessStatusCode();
                     break;
                 case System.Net.HttpStatusCode.InternalServerError:
-                    if(!string.IsNullOrEmpty((string)response["error"]["message"]["value"]))
+                    if ((JObject)response["error"] is not null)
                         throw new InternalServerException((string)response["error"]["message"]["value"]);
+                    if ((JObject)response["odata.error"] is not null)
+                        throw new InternalServerException((string)response["odata.error"]["message"]["value"]);
                     httpResponse.EnsureSuccessStatusCode();
                     break;
                 default:
-                    throw new Exception();
+                    httpResponse.EnsureSuccessStatusCode();
+                    break;
             }
         }
     }
