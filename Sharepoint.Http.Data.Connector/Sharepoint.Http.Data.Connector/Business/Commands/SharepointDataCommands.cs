@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Sharepoint.Http.Data.Connector.Models;
 using Sharepoint.Http.Data.Connector.Business.Configurations;
+using Sharepoint.Http.Data.Connector.Extensions;
 
 namespace Sharepoint.Http.Data.Connector.Business.Commands
 {
@@ -25,7 +26,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Commands
                 var client = await ConfigureClient(HeaderActionTypes.DELETE_RESOURCE);
                 var responseHttp = await client.PostAsync($"_api/web/GetFolderByServerRelativeUrl('{_configuration.ServerRelativeUrl}{serverRelativeUrl}')", null);
                 if (!responseHttp.IsSuccessStatusCode)
-                    throw new Exception();
+                    await responseHttp.ValidateException();
                 return responseHttp.IsSuccessStatusCode;
             }
             catch (Exception ex)
@@ -48,7 +49,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Commands
                 var client = await ConfigureClient(HeaderActionTypes.DELETE_RESOURCE);
                 var responseHttp = await client.PostAsync($"_api/web/GetFolderByServerRelativeUrl('{_configuration.ServerRelativeUrl}{serverRelativeUrl}/{fileName}')", null);
                 if (!responseHttp.IsSuccessStatusCode)
-                    throw new Exception();
+                    await responseHttp.ValidateException();
                 return responseHttp.IsSuccessStatusCode;
             }
             catch (Exception ex)
@@ -72,7 +73,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Commands
                 request.Content = new StringContent(JsonConvert.SerializeObject(new { ServerRelativeUrl = $"{_configuration.ServerRelativeUrl}{folderName}" }), Encoding.UTF8, "application/json");
                 var responseHttp = await client.SendAsync(request);
                 if (!responseHttp.IsSuccessStatusCode)
-                    throw new Exception();
+                    await responseHttp.ValidateException();
                 return JsonConvert.DeserializeObject<SharepointFolder>(await responseHttp.Content.ReadAsStringAsync());
             }
             catch (Exception ex)
@@ -97,7 +98,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Commands
                 request.Content = new StringContent(JsonConvert.SerializeObject(new { ServerRelativeUrl = $"{_configuration.ServerRelativeUrl}{serverRelativeUrl}/{folderName}" }), Encoding.UTF8, "application/json");
                 var responseHttp = await client.SendAsync(request);
                 if (!responseHttp.IsSuccessStatusCode)
-                    throw new Exception();
+                    await responseHttp.ValidateException();
                 return JsonConvert.DeserializeObject<SharepointFolder>(await responseHttp.Content.ReadAsStringAsync());
             }
             catch (Exception ex)
@@ -125,7 +126,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Commands
                     new ByteArrayContent(content)
                 );
                 if (!responseHttp.IsSuccessStatusCode)
-                    throw new Exception();
+                    await responseHttp.ValidateException();
                 return JsonConvert.DeserializeObject<SharepointFile>(await responseHttp.Content.ReadAsStringAsync());
             }
             catch (Exception ex)
