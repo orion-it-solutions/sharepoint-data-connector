@@ -1,7 +1,7 @@
-﻿using System.Net;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using Sharepoint.Http.Data.Connector.Models;
 using Sharepoint.Http.Data.Connector.Business.Configurations;
+using Sharepoint.Http.Data.Connector.Extensions;
 
 namespace Sharepoint.Http.Data.Connector.Business.Queries
 {
@@ -24,7 +24,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Queries
                 var client = await ConfigureClient(HeaderActionTypes.APPJSON_NOMETADATA);
                 var responseHttp = await client.GetAsync($"_api/web/GetFolderByServerRelativeUrl('{_configuration.ServerRelativeUrl}{serverRelativeUrl}')/exists");
                 if (!responseHttp.IsSuccessStatusCode)
-                    throw new Exception();
+                    await responseHttp.ValidateException();
                 var response = JObject.Parse(await responseHttp.Content.ReadAsStringAsync());
                 return response.Value<bool>("value");
             }
@@ -47,11 +47,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Queries
                 var client = await ConfigureClient(HeaderActionTypes.APPJSON_NOMETADATA);
                 var responseHttp = await client.GetAsync($"_api/web/GetFolderByServerRelativeUrl('{_configuration.ServerRelativeUrl}{serverRelativeUrl}')/files('{fileName}')/exists");
                 if (!responseHttp.IsSuccessStatusCode)
-                {
-                    if (responseHttp.StatusCode == HttpStatusCode.NotFound)
-                        return false;
-                    throw new Exception();
-                }
+                    await responseHttp.ValidateException();
                 var response = JObject.Parse(await responseHttp.Content.ReadAsStringAsync());
                 return response.Value<bool>("value");
             }
@@ -75,7 +71,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Queries
                 var client = await ConfigureClient(HeaderActionTypes.DOWNLOAD_FILE);
                 var responseHttp = await client.GetAsync($"{_configuration.SharepointSiteUrl}_api/web/GetFolderByServerRelativeUrl('{_configuration.ServerRelativeUrl}{serverRelativeUrl}')/files('{fileName}')/$value");
                 if (!responseHttp.IsSuccessStatusCode)
-                    throw new Exception();
+                    await responseHttp.ValidateException();
                 return await responseHttp.Content.ReadAsByteArrayAsync();
             }
             catch (Exception ex)
