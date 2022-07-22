@@ -21,6 +21,13 @@ namespace Sharepoint.Http.Data.Connector
         }
 
         /// <summary>
+        /// Fuction to retrive information of a resource that is in recycle bin using an unique identifier.
+        /// </summary>
+        /// <param name="resourceId">Resource unique identifier.</param>
+        /// <returns>Recycle bin resource information.</returns>
+        public async Task<SharepointRecycleResource?> GetRecycleBinResourceByIdAsync(Guid resourceId) => await _queries.GetRecycleBinResourceByIdAsync(resourceId);
+
+        /// <summary>
         /// Function to validate if exists a folder in Sharepoint site.
         /// </summary>
         /// <param name="serverRelativeUrl">Relative url of resource.</param>
@@ -59,7 +66,7 @@ namespace Sharepoint.Http.Data.Connector
         /// <param name="fileName">File name to delete.</param>
         /// <returns>Content file.</returns>
         /// <exception cref="Exception">Sharepoint connection error.</exception>
-        public async Task<byte[]> DownloadFileAsync(string serverRelativeUrl, string fileName) => await _queries.DownloadFileAsync(serverRelativeUrl, fileName);
+        public async Task<byte[]?> DownloadFileAsync(string serverRelativeUrl, string fileName) => await _queries.DownloadFileAsync(serverRelativeUrl, fileName);
 
         /// <summary>
         /// Function to create a folder to main server relative url.
@@ -67,7 +74,7 @@ namespace Sharepoint.Http.Data.Connector
         /// <param name="folderName">Folder name to be created.</param>
         /// <returns>Sharepoint folder information.</returns>
         /// <exception cref="Exception">Sharepoint connection error.</exception>
-        public async Task<SharepointFolder> CreateFolderAsync(string folderName) => await _commands.CreateFolderAsync(folderName);
+        public async Task<SharepointFolder?> CreateFolderAsync(string folderName) => await _commands.CreateFolderAsync(folderName);
 
         /// <summary>
         /// Function to create a folder for a specific path.
@@ -76,7 +83,7 @@ namespace Sharepoint.Http.Data.Connector
         /// <param name="folderName">Folder name to be created.</param>
         /// <returns>Sharepoint folder information.</returns>
         /// <exception cref="Exception">Sharepoint connection error.</exception>
-        public async Task<SharepointFolder> CreateFolderAsync(string serverRelativeUrl, string folderName) => await _commands.CreateFolderAsync(serverRelativeUrl, folderName);
+        public async Task<SharepointFolder?> CreateFolderAsync(string serverRelativeUrl, string folderName) => await _commands.CreateFolderAsync(serverRelativeUrl, folderName);
 
         /// <summary>
         /// Function to upload a file for a specific path.
@@ -84,9 +91,34 @@ namespace Sharepoint.Http.Data.Connector
         /// <param name="serverRelativeUrl">Relative url of resource.</param>
         /// <param name="fileName">File name to delete.</param>
         /// <param name="content">Content file.</param>
-        /// <param name="overrride">Override file or not.</param>
         /// <returns>Sharepoint file information.</returns>
         /// <exception cref="Exception">Sharepoint connection error.</exception>
-        public async Task<SharepointFile> UploadFileAsync(string serverRelativeUrl, string fileName, byte[] content) => await _commands.UploadFileAsync(serverRelativeUrl, fileName, content);
+        public async Task<SharepointFile?> UploadFileAsync(string serverRelativeUrl, string fileName, byte[] content) => await _commands.UploadFileAsync(serverRelativeUrl, fileName, content);
+
+        /// <summary>
+        /// Fuction to move a resource to recycle bin in a sharepoint site an unique identifier.
+        /// </summary>
+        /// <param name="serverRelativeUrl">Resource unique identifier.</param>
+        /// <returns>Recycle bin resource information.</returns>
+        public async Task<SharepointRecycleResource?> DeleteResourceToRecycleBinByIdAsync(string serverRelativeUrl)
+        {
+            var recycleResourceId = await _commands.DeleteResourceToRecycleBinByIdAsync(serverRelativeUrl);
+            if (recycleResourceId == Guid.Empty)
+                return null;
+            return await _queries.GetRecycleBinResourceByIdAsync(recycleResourceId);
+        }
+
+        /// <summary>
+        /// Fuction to restore a resource that is in recycle bin folder using an unique identifier.
+        /// </summary>
+        /// <param name="resourceId">Resource unique identifier.</param>
+        /// <returns>Resource restored.</returns>
+        public async Task<bool?> RestoreRecycleBinResourceByIdAsync(Guid resourceId)
+        {
+            var resouce = await _queries.GetRecycleBinResourceByIdAsync(resourceId);
+            if (resouce is null)
+                return null;
+            return await _commands.RestoreRecycleBinResourceByIdAsync(resourceId);
+        }
     }
 }

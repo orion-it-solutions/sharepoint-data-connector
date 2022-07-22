@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using Sharepoint.Http.Data.Connector.Extensions;
 using Sharepoint.Http.Data.Connector.Models;
 
 namespace Sharepoint.Http.Data.Connector.Business.Configurations
@@ -36,7 +37,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Configurations
             };
             var responseHttp = await client.PostAsync("tokens/oAuth/2", new FormUrlEncodedContent(content));
             if (!responseHttp.IsSuccessStatusCode)
-                throw new Exception();
+                await responseHttp.ValidateException();
             var response = JObject.Parse(await responseHttp.Content.ReadAsStringAsync());
             return response.Value<string>("access_token") ?? string.Empty;
         }
@@ -64,6 +65,7 @@ namespace Sharepoint.Http.Data.Connector.Business.Configurations
             {
                 case HeaderActionTypes.DOWNLOAD_FILE:
                     client.DefaultRequestHeaders.Add("Accept", "application/octet-stream");
+                    client.DefaultRequestHeaders.Add("Accept", "application/json");
                     client.DefaultRequestHeaders.Add("binaryStringRequestBody", "true");
                     break;
                 case HeaderActionTypes.DELETE_RESOURCE:

@@ -14,7 +14,7 @@ namespace Sharepoint.Http.Data.Connector.UT
                 AuthenticationUrl = "",
                 TenantId = "",
                 ClientId = "",
-                ClientSecret ="",
+                ClientSecret = "",
                 GrantType = "",
                 Resource = "",
                 // Rest API to sharepoint site configuration.
@@ -77,7 +77,7 @@ namespace Sharepoint.Http.Data.Connector.UT
         [TestMethod]
         public async Task Success_Download_File()
         {
-            var response = await _sharepointContext.DownloadFileAsync("020044412", "TestDocument.pdf");
+            var response = await _sharepointContext.DownloadFileAsync("020044412", "TestDocument3.pdf");
             if (response.Length <= 0)
                 throw new Exception("The resource must be downloaded, it exists!!");
         }
@@ -105,6 +105,46 @@ namespace Sharepoint.Http.Data.Connector.UT
             var response = await _sharepointContext.UploadFileAsync("My folder/My new folder", "DocumentTest2.pdf", content);
             if (response is null)
                 throw new Exception("The resource must be updated!!");
+        }
+
+        [TestMethod]
+        public async Task Retrive_Recycle_Bin_Resource_By_Id()
+        {
+            var response = await _sharepointContext.GetRecycleBinResourceByIdAsync(new Guid("bab08627-49e1-4703-8f84-8a9b503b4582"));
+            if (response is null)
+                throw new Exception("The resource doesn't exists!!");
+        }
+
+        [TestMethod]
+        public async Task Delete_Failed_Resource_To_Recycle_Bin()
+        {
+            var response = await _sharepointContext.DeleteResourceToRecycleBinByIdAsync("0200444100");
+            if (response is null)
+                throw new Exception("The resource doesn't exists!!");
+        }
+
+        [TestMethod]
+        public async Task Delete_Success_Resource_To_Recycle_Bin()
+        {
+            var response = await _sharepointContext.DeleteResourceToRecycleBinByIdAsync("020044412/TestDocument.pdf");
+            if (response is null)
+                throw new Exception("The resource doesn't exists!!");
+        }
+
+        [TestMethod]
+        public async Task Successed_Restore_Resource_From_Recycle_Bin()
+        {
+            var response = await _sharepointContext.RestoreRecycleBinResourceByIdAsync(new Guid("19f4f1ab-b8ea-4e41-be11-35747a1a758e"));
+            if (response is null)
+                throw new Exception("The resource doesn't exists!!");
+        }
+
+        [TestMethod]
+        public async Task Failed_Restore_Resource_From_Recycle_Bin()
+        {
+            var response = await _sharepointContext.RestoreRecycleBinResourceByIdAsync(new Guid("c5eec67f-75c4-45e0-b397-7768cda06ee2"));
+            if (response is null)
+                throw new Exception("The resource doesn't exists!!");
         }
     }
 }

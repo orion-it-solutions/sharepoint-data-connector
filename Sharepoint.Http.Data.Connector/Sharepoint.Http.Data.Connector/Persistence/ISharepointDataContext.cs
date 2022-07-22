@@ -8,6 +8,13 @@ namespace Sharepoint.Http.Data.Connector.Persistence
     public interface ISharepointDataContext
     {
         /// <summary>
+        /// Fuction to retrive information of a resource that is in recycle bin using an unique identifier.
+        /// </summary>
+        /// <param name="resourceId">Resource unique identifier.</param>
+        /// <returns>Recycle bin resource information.</returns>
+        Task<SharepointRecycleResource?> GetRecycleBinResourceByIdAsync(Guid resourceId);
+
+        /// <summary>
         /// Function to validate if exists a folder in Sharepoint site.
         /// </summary>
         /// <param name="serverRelativeUrl">Relative url of resource.</param>
@@ -42,15 +49,15 @@ namespace Sharepoint.Http.Data.Connector.Persistence
         /// </summary>
         /// <param name="serverRelativeUrl">Relative url of resource.</param>
         /// <param name="fileName">File name to delete.</param>
-        /// <returns>Content file.</returns>
-        Task<byte[]> DownloadFileAsync(string serverRelativeUrl, string fileName);
+        /// <returns>Byte array with file content.</returns>
+        Task<byte[]?> DownloadFileAsync(string serverRelativeUrl, string fileName);
 
         /// <summary>
         /// Function to create a folder to main server relative url.
         /// </summary>
         /// <param name="folderName">Folder name to be created.</param>
         /// <returns>Sharepoint folder information.</returns>
-        Task<SharepointFolder> CreateFolderAsync(string folderName);
+        Task<SharepointFolder?> CreateFolderAsync(string folderName);
 
         /// <summary>
         /// Function to create a folder for a specific path.
@@ -58,7 +65,7 @@ namespace Sharepoint.Http.Data.Connector.Persistence
         /// <param name="serverRelativeUrl">Relative url of resource.</param>
         /// <param name="folderName">Folder name to be created.</param>
         /// <returns>Sharepoint folder information.</returns>
-        Task<SharepointFolder> CreateFolderAsync(string serverRelativeUrl, string folderName);
+        Task<SharepointFolder?> CreateFolderAsync(string serverRelativeUrl, string folderName);
 
         /// <summary>
         /// Function to upload a file for a specific path.
@@ -66,8 +73,21 @@ namespace Sharepoint.Http.Data.Connector.Persistence
         /// <param name="serverRelativeUrl">Relative url of resource.</param>
         /// <param name="fileName">File name to delete.</param>
         /// <param name="content">Content file.</param>
-        /// <param name="overrride">Override file or not.</param>
         /// <returns>Sharepoint file information.</returns>
-        Task<SharepointFile> UploadFileAsync(string serverRelativeUrl, string fileName, byte[] content);
+        Task<SharepointFile?> UploadFileAsync(string serverRelativeUrl, string fileName, byte[] content);
+
+        /// <summary>
+        /// Fuction to move a resource to recycle bin in a sharepoint site an unique identifier.
+        /// </summary>
+        /// <param name="serverRelativeUrl">Resource unique identifier.</param>
+        /// <returns>Recycle bin resource information.</returns>
+        Task<SharepointRecycleResource?> DeleteResourceToRecycleBinByIdAsync(string serverRelativeUrl);
+
+        /// <summary>
+        /// Fuction to restore a resource that is in recycle bin folder using an unique identifier.
+        /// </summary>
+        /// <param name="resourceId">Resource unique identifier.</param>
+        /// <returns>Resource restored.</returns>
+        Task<bool?> RestoreRecycleBinResourceByIdAsync(Guid resourceId);
     }
 }
