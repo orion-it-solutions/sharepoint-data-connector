@@ -16,11 +16,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Sharepoint http data connector is a library that can help us manage API calls to " +
     "our sites on Sharepoint.\r\nProvides a list of features that are useful for this i" +
     "ntegration.")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sharepoint.Http.Data.Connector")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sharepoint.Http.Data.Connector")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.1")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.2")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/orion-it-solutions/sharepoint-http-data-connector/")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

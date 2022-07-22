@@ -8,9 +8,9 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/orion-it-solutions/sharepoint-http-data-connector/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+    <Version>1.0.2</Version>
     <Authors>Emmanuel Toledo</Authors>
     <Description>Sharepoint http data connector is a library that can help us manage API calls to our sites on Sharepoint.
 Provides a list of features that are useful for this integration.</Description>

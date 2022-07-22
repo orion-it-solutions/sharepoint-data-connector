@@ -52,7 +52,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "restore": {
       "projectUniqueName": "C:\\Orion\\Sharepoint HDC\\sharepoint-http-data-connector\\Sharepoint.Http.Data.Connector\\Sharepoint.Http.Data.Connector\\Sharepoint.Http.Data.Connector.csproj",
       "projectName": "Sharepoint.Http.Data.Connector",
